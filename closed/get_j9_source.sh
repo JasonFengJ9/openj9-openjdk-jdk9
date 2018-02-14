@@ -178,7 +178,7 @@ for i in "${!git_urls[@]}" ; do
 		echo
 
 		cd ${i}
-		git checkout ${shas[$i]}
+		git checkout -B ${branches[$i]} ${shas[$i]}
 		cd - > /dev/null
 	fi
 done
